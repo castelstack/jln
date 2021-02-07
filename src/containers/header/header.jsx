@@ -2,17 +2,21 @@ import React from "react";
 import Logo from "../../images/logo.png";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-
+import './header.css'
+import Drawer from "../../components/drawer/drawer";
 
  
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: min-content max-content;
   align-items: center;
+  justify-content: space-between;
   padding: 0 6rem;
 
+
+  @media only screen and (max-width: 1150px) {
+    padding: 0 1rem;
+  }
    @media only screen and (max-width: 500px) {
     padding: 0 1rem;
   }
@@ -22,11 +26,8 @@ const Img = styled.img`
   height: 5rem;
 `;
 const Nav = styled.div`
-  display: grid;
-  grid-template-columns: repeat(6, max-content);
-  justify-content: space-around;
-
-  @media only screen and (max-width: 500px) {
+ 
+  @media only screen and (max-width: 1050px) {
     display: none;
   }
 `;
@@ -41,7 +42,7 @@ const NavLk = styled(NavLink)`
 text-transform: uppercase;
   will-change: color;
   transition: color 0.25s ease-out;
-
+padding: .3rem 2rem;
   &::before,
   &::after {
     content: "";
@@ -73,50 +74,46 @@ text-transform: uppercase;
   }
 `;
 
-const Dropd = styled.button`
-border: none;
-background: white;
-color: #333333;
-font-size: 1.1rem;
-font-weight: 300;
-`
-
 export default function Header() {
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
-
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  
   return (
     <Container className='header'>
-      <Img src={Logo} alt='logo' />
-      <Nav>
+      {/* <Nav>
         <NavLk to='/'>Home</NavLk>
         <NavLk to='/about'>About</NavLk>
         <NavLk to='/contact'>Contact</NavLk>
         <NavLk to='/gallery'>Gallery</NavLk>
-        
-        <Dropd aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        GOODS & SERVICES
-      </Dropd>
-      <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        keepMounted
-        open={Boolean(anchorEl)}
-        onClose={handleClose}
-      >
-        <MenuItem onClick={handleClose}><NavLk to='/construction'>Construction</NavLk></MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
         <NavLk to='/blog'>Blog</NavLk>
-      </Nav>
+      </Nav> */}
+      <Img src={Logo} alt='logo' />
+<Drawer />
+      <Nav>
+      <nav>
+  <ul className="primary">
+    <li>
+    <NavLk to='/'>Home</NavLk>
+    </li>
+    <li>
+    <NavLk to='/about'>About</NavLk>
+    </li>
+    <li>
+    <NavLk to='/gallery'>Gallery</NavLk>
+    </li>
+    <li>
+    <NavLk to='/blog'>GOOD'S AND SERVICE</NavLk>
+      <ul className="sub">
+        <li><NavLk to='/construction'>CONSTRUCTION</NavLk></li>
+        <li><NavLk to='/'>Blog</NavLk></li>
+        <li><NavLk to='/'>Blog</NavLk></li>
+      </ul>  
+    </li>
+    <li>
+    <NavLk to='/contact'>Contact</NavLk>
+    </li>
+  </ul>
+</nav>
+     </Nav>
     </Container>
   );
 }

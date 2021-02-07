@@ -21,7 +21,7 @@ const ServiceBox = styled.div`
     grid-template-columns: 1fr;
     justify-items: center;
     justify-content: space-between;
-    grid-gap: 1rem;
+    grid-gap: 2.5rem;
   }
 `;
 const Heading = styled(BgText)`

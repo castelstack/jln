@@ -1,47 +1,89 @@
+
+
+ul {
+  list-style: none;
  
-  ul {
-    text-align: left;
-    display: inline;
-    margin: 0;
-    padding: 5px ;
-    list-style: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  }
-  ul li {
-    font: bold 12px/18px sans-serif;
-    display: inline-block;
-    margin-right: -4px;
-    position: relative;
-    padding:    5px ;
-    background: #fff;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  ul li:hover {
-    background: #555;
-    color: #fff;
-  }
-  ul li ul {
-    padding: 0;
-    position: absolute;
-    top: 48px;
-    left: 0;
-    width: 150px;
-    box-shadow: none;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s;
-  }
-  ul li ul li { 
-    background: #555; 
-    display: block; 
-    color: #fff;
-    text-shadow: 0 -1px 0 #000;
-  }
-  ul li ul li:hover { background: #666; }
-  ul li:hover ul {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
+  
+  display: flex;
+ 
+  align-items: center;
+}
+
+li {
+  float: left;
+}
+
+/* clear'n floats */
+ul:after {
+  clear: both;
+}
+
+ul:before,
+ul:after {
+    content: " ";
+    display: table;
+}
+
+
+/* prime */
+ul.primary li a {
+  display: block;
+  
+}
+
+ul.primary li:last-child a {
+  border-right: none;
+}
+
+ul.primary li a:hover {
+  
+  color: #000;
+}
+
+/* subs */
+ul.sub {
+  position: absolute;
+  z-index: 200;
+  box-shadow: 2px 2px 0 #BEBEBE;
+  width: 35%;
+  display:none;
+}
+
+ul.sub li {
+  float: none;
+  margin: 0;
+}
+
+ul.sub li a {
+  border-bottom: 1px dotted #ccc;
+  border-right: none;
+  color: #000;
+  padding: 15px 30px;
+}
+
+ul.sub li:last-child a {
+  border-bottom: none;
+}
+
+ul.sub li a:hover {
+  color: #000;
+  background: #eeeeee;
+}
+
+/* sub display*/
+ul.primary li:hover ul {
+  display: block;
+  background: #fff;
+}
+
+/* keeps the tab background white */
+ul.primary li:hover a {
+  background: #fff;
+  color: #666;
+  text-shadow: none;
+}
+
+ul.primary li:hover > a{
+  color: #000;
+} 
+

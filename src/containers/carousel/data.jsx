@@ -1,5 +1,4 @@
 import React from "react";
-import slide1 from "../../images/slide1.jpg";
 import logo from "../../images/logo.png";
 import slide3 from "../../images/slide3.jpg";
 import { BgText, SmText } from "../../constant/style";
