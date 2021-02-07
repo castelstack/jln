@@ -86,7 +86,10 @@ export default function Header() {
         <NavLk to='/gallery'>Gallery</NavLk>
         <NavLk to='/blog'>Blog</NavLk>
       </Nav> */}
+      <NavLink to='/'>
+
       <Img src={Logo} alt='logo' />
+      </NavLink>
 <Drawer />
       <Nav>
       <nav>
