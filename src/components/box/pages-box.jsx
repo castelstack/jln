@@ -12,7 +12,7 @@ const Container = styled.div`
     padding: 4rem 3rem;
   }
   @media only screen and (max-width: 850px) {
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
   }
 `;
 
@@ -35,8 +35,7 @@ const ContentRev = styled.div`
   grid-gap: 1rem;
 
   @media only screen and (max-width: 850px) {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns:1fr;
   }
 `;
 const WriteUp = styled.div`
@@ -44,6 +43,10 @@ const WriteUp = styled.div`
   grid-template-columns: 1fr;
 
   grid-gap: 1rem;
+  @media only screen and (max-width: 850px) {
+    grid-row:1/2;
+    grid-column: 1/2;
+  }
 `;
 
 const Img = styled.img`
@@ -51,6 +54,7 @@ const Img = styled.img`
   height: 30rem;
   @media only screen and (max-width: 850px) {
     width: 100%;
+    
   }
 `;
 

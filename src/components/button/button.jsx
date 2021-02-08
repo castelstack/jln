@@ -5,9 +5,9 @@ import styled from "styled-components";
 const CustomButton = styled.button`
   width: ${(props) => (props.big ? "235px" : "139px")};
   height: ${(props) => (props.big ? "58px" : "38px")};
-  background:  rgba(0, 0, 0, 0);
+  background:  #03663e;
   cursor: pointer;
-  border: ${(props) => (props.yellow ? "solid 1px #FCEA4A" : "solid 1px #fff")};
+  border: none;
 
   border-radius: 0px;
   font-family: Nunito Sans;
@@ -16,7 +16,7 @@ const CustomButton = styled.button`
   font-size: ${(props) => (props.big ? "20px" : "15px")};
   line-height: 33px;
   outline: none;
-  color: ${(props) => (props.yellow ? "#333333" : "#fff")};
+  color: white;
 
   @media only screen and (max-width: 1200px) {
     width: 200px;
@@ -37,7 +37,8 @@ const CustomButton = styled.button`
   }
 
   &:hover {
-    box-shadow: 5px 8px 9px -10px rgba(0, 0, 0, 0.4);
+    background: white;
+    color: #03663e;
     transform: translateY(-0.6px);
   }
   &:active {

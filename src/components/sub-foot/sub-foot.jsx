@@ -4,6 +4,11 @@ import Img from "../../images/slide3.jpg";
 import styled from "styled-components";
 import ContactBox from "../contact-box/contact-box";
 
+import LocationOnIcon from "@material-ui/icons/LocationOn";
+import CallIcon from "@material-ui/icons/Call";
+import EmailIcon from "@material-ui/icons/Email";
+
+
 const Container = styled.div``;
 const Contain = styled.div`
   height: 35rem;
@@ -11,8 +16,13 @@ const Contain = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 1rem 6rem;
+  grid-gap: 4rem;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1200px) {
+    grid-gap: 2rem;
+    padding: 10px 1rem;
+  }
+  @media only screen and (max-width: 1031px) {
     grid-gap: 2rem;
     grid-template-columns: 1fr;
     padding: 10px 1rem;
@@ -27,6 +37,8 @@ const GetIn = styled.div`
 
   background-image: url(${Img});
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 `;
 
 const Bg = styled.div`
@@ -40,9 +52,21 @@ const Bg = styled.div`
   align-items: center;
 `;
 
-const Visit = styled.div``;
-const Call = styled.div``;
-const Email = styled.div``;
+const ContactInfo = styled.div`
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+height: 10rem;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 2rem 2rem;
+justify-items: flex-start;
+@media only screen and (max-width: 1031px) {
+  display: none;
+}
+`;
+
+
 const Info = styled.div`
   display: grid;
   grid-template-columns: repeat(3, max-content);
@@ -64,8 +88,8 @@ const SubFoot = () => {
     <Container>
       <GetIn>
         <Bg>
-          <BgText white>Get rich now</BgText>
-          <SmText white>and stay rich forever</SmText>
+          <BgText white>Let us work together</BgText>
+          <SmText white>Get in touch now</SmText>
         </Bg>
       </GetIn>
       <Contain>
@@ -75,18 +99,22 @@ const SubFoot = () => {
        <ContactBox />
         </ContactImport>
         <Info>
-          <Visit>
-            <MdText>Visit Us</MdText>
+          <ContactInfo>
+          <LocationOnIcon style={{ color: "#3E755F", fontSize: "2rem" }} />
+            <MdText>Locate Us</MdText>
             <SmText>22 road lagos</SmText>
-          </Visit>
-          <Call>
-            <MdText>Visit Us</MdText>
-            <SmText>22 road lagos</SmText>
-          </Call>
-          <Email>
-            <MdText>Visit Us</MdText>
-            <SmText>22 road lagos</SmText>
-          </Email>
+          </ContactInfo>
+          <ContactInfo>
+          <CallIcon style={{ color: "#3E755F", fontSize: "2rem" }} />
+            <MdText>Call Us</MdText>
+            <SmText>080****343</SmText>
+            <SmText>080****343</SmText>
+          </ContactInfo>
+          <ContactInfo>
+          <EmailIcon style={{ color: "#3E755F", fontSize: "2rem" }} />
+            <MdText>Email Us</MdText>
+            <SmText>jnl2332@gmail.com</SmText>
+          </ContactInfo>
         </Info>
       </Contain>
     </Container>

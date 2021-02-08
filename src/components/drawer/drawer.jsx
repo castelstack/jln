@@ -6,11 +6,12 @@ import Button from "@material-ui/core/Button";
 //import List from "@material-ui/core/List";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Divider } from "@material-ui/core";
+import Img from "../../images/logo.png";
 import { Container, List, NavLk} from "./drawer-style";
-
+import '../../containers/header/header.css'
 const useStyles = makeStyles({
   list: {
-    width: 200,
+    width: 250,
   },
   fullList: {
     width: "auto",
@@ -48,7 +49,8 @@ export default function Drawer(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
      
-        <List>
+      <List>
+        <img src={Img} alt=''/>
         <NavLk to='/'>Home</NavLk>
         <Divider light />
         <NavLk to='/about'>About</NavLk>
@@ -57,7 +59,24 @@ export default function Drawer(props) {
         <Divider light />
         <NavLk to='/gallery'>Gallery</NavLk>
         <Divider light />
-        <NavLk to='/construction'>Construction</NavLk>
+        <nav>
+  <ul className="primary">
+    <li>
+    <NavLk to='/blog'>GOOD'S AND SERVICE</NavLk>
+      <ul className="msub">
+        <li><NavLk to='/construction'>CONSTRUCTION</NavLk></li>
+        <li><NavLk to='/'>Blog</NavLk></li>
+        <li><NavLk to='/'>Blog</NavLk></li>
+      </ul>  
+    </li>
+   </ul>
+</nav>
+
+
+        
+
+
+
         <Divider light />
         <NavLk to='/blog'>Blog</NavLk>
           <Divider light />

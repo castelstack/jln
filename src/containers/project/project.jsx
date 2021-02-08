@@ -1,5 +1,5 @@
 import React from "react";
-import { BgText, SmText } from "../../constant/style";
+import { LgText, SmText } from "../../constant/style";
 import Pic from "../../images/Picture1.png";
 import styled from "styled-components";
 import { CardMedia } from "@material-ui/core";
@@ -34,30 +34,10 @@ const Gallery = styled.div`
 const Project = () => {
   return (
     <Container>
-      <BgText>Our Project</BgText>
+      <LgText>Our Project</LgText>
       <SmText>Bringing growth, ingenuity, and experience to market.</SmText>
       <Gallery>
-        <CardMedia
-          component='img'
-          alt='Contemplative Reptile'
-          height='200'
-          image={Pic}
-          title='Contemplative Reptile'
-        />
-        <CardMedia
-          component='img'
-          alt='Contemplative Reptile'
-          height='200'
-          image={Pic}
-          title='Contemplative Reptile'
-        />
-        <CardMedia
-          component='img'
-          alt='Contemplative Reptile'
-          height='200'
-          image={Pic}
-          title='Contemplative Reptile'
-        />
+      
         <CardMedia
           component='img'
           alt='Contemplative Reptile'

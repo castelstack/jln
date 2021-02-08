@@ -6,8 +6,9 @@ import Img from "../../images/bg.svg";
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url(${Img});
-  padding: 5rem 3rem;
+  padding: 10rem 3rem;
 
   @media only screen and (max-width: 700px) {
    
@@ -16,7 +17,7 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-height: 55vh;
+
 width: 70%;
 display: flex;
 flex-direction: column;

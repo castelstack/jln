@@ -11,8 +11,9 @@ export const Container = styled.div`
 export const NavLk = styled(NavLink)`
   text-decoration: none;
   color: #333333;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
   position: relative;
   overflow: hidden;
 text-transform: uppercase;
@@ -54,4 +55,5 @@ export const List = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
 `;

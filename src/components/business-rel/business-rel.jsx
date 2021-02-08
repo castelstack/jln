@@ -24,6 +24,9 @@ const Content = styled.div`
   width: 40%;
   padding: 1rem;
   margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin-left: 0rem;

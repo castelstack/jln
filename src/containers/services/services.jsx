@@ -1,5 +1,5 @@
 import React from "react";
-import { BgText } from "../../constant/style";
+import { LgText } from "../../constant/style";
 import Agriculture from "../../components/agriculture/agriculture";
 import Construction from "../../components/construction/construction";
 import ManuRep from "../../components/manu-rep/manu-rep";
@@ -8,7 +8,11 @@ const Container = styled.div`
 background: #28a7461e;
 padding: 3rem 6rem;
 
-@media only screen and (max-width: 702px) {
+@media only screen and (max-width: 1200px) {
+  padding: 3rem 2rem;
+}
+
+@media only screen and (max-width: 802px) {
   padding: 3rem 1rem;
 };`
 const ServiceBox = styled.div`
@@ -17,6 +21,11 @@ const ServiceBox = styled.div`
   justify-content: space-around;
   grid-gap: 5rem;
  
+
+  @media only screen and (max-width: 1050px) {
+   
+    grid-gap: 2rem;
+  }
   @media only screen and (max-width: 702px) {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -24,7 +33,7 @@ const ServiceBox = styled.div`
     grid-gap: 2.5rem;
   }
 `;
-const Heading = styled(BgText)`
+const Heading = styled(LgText)`
   color: #333333;
   text-align: center;
   margin-bottom: 1.5rem;

@@ -12,14 +12,21 @@ justify-content: center;
 padding: 8rem 1rem;
 background: #fff;`
 
+const Head = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;`
 const Contact = () => {
     return (
         <div>
             <Box title='Contact us' currentPage='Contact us' />
             <Contacts />
             <MessageUs>
+                <Head>
+
             <BgText >GET IN TOUCH</BgText>
           <SmText >Send us you message and we will get back to you!</SmText>
+                </Head>
                 <ContactBox color='secondary'/>
             </MessageUs>
            

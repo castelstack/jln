@@ -1,9 +1,10 @@
 import React from "react";
-import { BgText, SmText, MdText } from "../../constant/style";
+import { LgText, SmText, MdText } from "../../constant/style";
 import Checkbox from '@material-ui/core/Checkbox';
 import Button from "../../components/button/button";
 import Slide from "../../images/slide3.jpg";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: grid;
@@ -12,7 +13,7 @@ const Container = styled.div`
   padding: 4rem 6rem;
   justify-content: space-around;
   justify-items: center;
-
+align-items: center;
   @media only screen and (max-width: 700px) {
     padding: 2rem 1rem;
   }
@@ -29,6 +30,13 @@ display: grid;
   grid-gap: 20px;
   justify-content: space-around;`;
 
+  const Head = styled.div`
+display: grid;
+  grid-template-columns: 1fr ;
+  grid-gap: 20px;
+  justify-items: center;
+  `;
+
 const Image = styled.img`
   width: 25rem;
   height: 30rem;
@@ -42,8 +50,7 @@ const Image = styled.img`
   }
   
   @media only screen and (max-width: 600px) {
-    width: 90%;
-    height: 50%;
+   display: none;
   }
   `;
 
@@ -65,27 +72,30 @@ const AboutUs = () => {
   return (
     <Container>
       <Contain>
-        <div>
+        <Head>
           
-          <BgText>JLN BUILDERS Ltd</BgText>
+          <LgText>JLN BUILDERS Ltd</LgText>
           <SmText>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             repellendus enim reiciendis, voluptatem accusamus molestias nostrum
             consectetur aliquid, consequatur tempore aut quis quod veniam
             quaerat? Quas sapiente quos accusamus corrupti.
           </SmText>
-        </div>
+        </Head>
         <Offers>
-        <MdText>Special Offer</MdText>
+        <MdText bold>Special Offer</MdText>
           <SpBox>
-            <SmText><Checkbox style={{ color: 'green' }} checked /> Desgn build</SmText>
-            <SmText><Checkbox style={{ color: 'green' }} checked /> Desgn build</SmText>
-            <SmText><Checkbox style={{ color: 'green' }} checked /> Desgn build</SmText>
-            <SmText><Checkbox style={{ color: 'green' }} checked /> Desgn build</SmText>
-            <SmText><Checkbox style={{ color: 'green' }}checked /> Desgn build</SmText>
-            <SmText><Checkbox style={{ color: 'green' }}checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }} checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }} checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }} checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }} checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }}checked /> Desgn build</SmText>
+            <SmText><Checkbox style={{ color: '#03663e' }}checked /> Desgn build</SmText>
           </SpBox>
+          <Link to='/about' >
+
         <Button value='Learn more' yellow />
+          </Link>
         </Offers>
       </Contain>
       <div>

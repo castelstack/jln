@@ -2,7 +2,7 @@ import { Breadcrumbs } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Img from "../../images/slide2.jpg";
-import { BgText, SmText } from '../../constant/style';
+import { LgText, SmText } from '../../constant/style';
 import styled from "styled-components";
 
 
@@ -19,9 +19,13 @@ display: grid;
 grid-template-columns: max-content;
 grid-template-rows: min-content min-content;
 align-content: end;
-padding:2rem;
+padding:1rem;
 `;
 
+const LinkTo = styled(Link)`
+text-decoration: none;
+
+`
 
 const Box = ({title, currentPage}) => {
     return (
@@ -30,10 +34,10 @@ const Box = ({title, currentPage}) => {
                 
              
                     
-                <BgText white>{title}</BgText>
+                <LgText white>{title}</LgText>
                     <Breadcrumbs>
-                    <Link to=''><SmText white>Home</SmText></Link>
-                    <Link to=''><SmText white>{currentPage}</SmText></Link>
+                    <LinkTo to=''><SmText white bold>Home</SmText></LinkTo>
+                    <LinkTo to=''><SmText white >{currentPage}</SmText></LinkTo>
                     </Breadcrumbs>
 
                 

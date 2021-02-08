@@ -113,6 +113,9 @@ export default function Header() {
     </li>
     <li>
     <NavLk to='/contact'>Contact</NavLk>
+            </li>
+            <li>
+    <NavLk to='/blog'>Blog</NavLk>
     </li>
   </ul>
 </nav>

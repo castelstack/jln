@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const LgText = styled.h1`
- 
+font-family: 'Roboto', sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 900;
   font-size: 3.5rem;
   line-height: 45px;
   /* identical to box height */
@@ -31,7 +31,7 @@ export const LgText = styled.h1`
   }
 `;
 export const BgText = styled.h1`
- 
+font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
@@ -59,7 +59,7 @@ export const BgText = styled.h1`
 `;
 
 export const MdText = styled.h3`
-font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-style: normal;
 font-weight:   ${(props) => (props.bold ? "bold" : "500")};
 font-size: 1.3rem;
@@ -86,10 +86,10 @@ color:  ${(props) => (props.white ? "white" : "#333333")};
   }`;
 
 export const SmText = styled.h5`
- 
+font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight:   ${(props) => (props.bold ? "bold" : "400")};
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
 
   color: ${(props) => (props.white ? "white" : "#333333")};

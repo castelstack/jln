@@ -28,6 +28,9 @@ const Statement = styled.div`
 background: rgba(0, 0, 0, 0.5);
 padding: 1rem;
 height:100%;
+display: flex;
+flex-direction: column;
+align-items: center;
 ;
 `;
 
