@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 const Container = styled.div`
   height: 90vh;
   background-image: url(${slide3});
+  background-position: center;
+ 
 `;
 
 const Contain = styled.div`
