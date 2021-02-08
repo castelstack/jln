@@ -34,7 +34,7 @@ const Gallery = styled.div`
 const Project = () => {
   return (
     <Container>
-      <LgText>Our Project</LgText>
+      <LgText>OUR PROJECT</LgText>
       <SmText>Bringing growth, ingenuity, and experience to market.</SmText>
       <Gallery>
       
@@ -44,6 +44,7 @@ const Project = () => {
           height='200'
           image={Pic}
           title='Contemplative Reptile'
+          borderRadius="100"
         />
         <CardMedia
           component='img'
