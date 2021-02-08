@@ -8,6 +8,7 @@ import Contact from "./pages/contact/contact";
 import Gallery from "./pages/gallery/gallery";
 import ConstructionPage from "./pages/construction-page/construction-page";
 import Blog from "./pages/blog/blog";
+import AgriculturePage from "./pages/agriculture-page/agriculture";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/contact' component={Contact} />
           <Route path='/gallery' component={Gallery} />
           <Route path='/construction' component={ConstructionPage} />
+          <Route path='/agriculture' component={AgriculturePage} />
           <Route path='/blog' component={Blog} />
         </Switch>
       <Footer />

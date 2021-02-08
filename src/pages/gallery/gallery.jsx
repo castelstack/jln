@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 // import { Breadcrumbs } from '@material-ui/core';
 // import { NavLink, Route, Switch, withRouter } from 'react-router-dom';
 // import styled from 'styled-components';
@@ -45,17 +45,17 @@
 // transition-duration: .2s;
 // }
 // `;
-// const Gallery = () => {
-//     return (
-//         <div>
-//             <div>
+const Gallery = () => {
+    return (
+        <div>
+            <div>
              
-//             </div>
-//             <div>
+            </div>
+            <div>
                
-//             </div>
-//         </div>
-//     );
-// };
+            </div>
+        </div>
+    );
+};
 
-// export default Gallery;
+export default Gallery;

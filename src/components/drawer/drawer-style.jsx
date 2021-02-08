@@ -8,6 +8,18 @@ export const Container = styled.div`
   }
 `;
 
+export const NavDrop = styled.h3`
+  text-decoration: none;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+text-transform: uppercase;
+  will-change: color;
+  transition: color 0.25s ease-out;
+padding: .5rem 2rem;`
 export const NavLk = styled(NavLink)`
   text-decoration: none;
   color: #333333;

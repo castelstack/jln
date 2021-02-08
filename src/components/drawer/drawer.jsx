@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Divider } from "@material-ui/core";
 import Img from "../../images/logo.png";
-import { Container, List, NavLk} from "./drawer-style";
+import { Container, List, NavLk, NavDrop} from "./drawer-style";
 import '../../containers/header/header.css'
 const useStyles = makeStyles({
   list: {
@@ -62,10 +62,10 @@ export default function Drawer(props) {
         <nav>
   <ul className="primary">
     <li>
-    <NavLk to='/blog'>GOOD'S AND SERVICE</NavLk>
+    <NavDrop >GOOD'S AND SERVICE</NavDrop>
       <ul className="msub">
         <li><NavLk to='/construction'>CONSTRUCTION</NavLk></li>
-        <li><NavLk to='/'>Blog</NavLk></li>
+        <li><NavLk to='/agriculture'>Agriculture</NavLk></li>
         <li><NavLk to='/'>Blog</NavLk></li>
       </ul>  
     </li>

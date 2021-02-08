@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import './header.css'
 import Drawer from "../../components/drawer/drawer";
+import { NavDrop } from "../../components/drawer/drawer-style";
 
  
 const Container = styled.div`
@@ -104,10 +105,10 @@ export default function Header() {
     <NavLk to='/gallery'>Gallery</NavLk>
     </li>
     <li>
-    <NavLk to='/blog'>GOOD'S AND SERVICE</NavLk>
+    <NavDrop>GOOD'S AND SERVICE</NavDrop>
       <ul className="sub">
         <li><NavLk to='/construction'>CONSTRUCTION</NavLk></li>
-        <li><NavLk to='/'>Blog</NavLk></li>
+        <li><NavLk to='/agriculture'>Agriculture</NavLk></li>
         <li><NavLk to='/'>Blog</NavLk></li>
       </ul>  
     </li>
