@@ -6,7 +6,7 @@ import Img from "../../images/slide2.jpg";
 const AgriculturePage = () => {
   return (
     <div>
-      <Box title='Construction' currentPage='Construction' />
+      <Box title='Agriculture' currentPage='Agriculture' />
       <PagesBox
         title='LIVESTOCK'
         description='loremDonec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.'
