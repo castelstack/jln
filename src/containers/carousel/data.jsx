@@ -1,7 +1,6 @@
 import React from "react";
-import logo from "../../images/logo.png";
 import slide3 from "../../images/slide1.jpg";
-import { BgText, SmText } from "../../constant/style";
+import { LgText, SmText } from "../../constant/style";
 import Button from "../../components/button/button";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -18,16 +17,51 @@ const Contain = styled.div`
   height: 90vh;
   display: flex;
   align-items: center;
+
+   
+  @media only screen and (max-width: 990px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
 `;
 
 const Info = styled.div`
   margin: 0 6rem;
-  @media only screen and (max-width: 700px) {
+  @media only screen and (max-width: 990px) {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+
+  @media only screen and (max-width: 800px) {
     margin: 0rem 1rem;
   }
 `;
-const Text = styled(BgText)`
+const Text = styled(LgText)`
   color: white;
+  font-size: 6rem;
+  line-height: 5rem;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 4rem;
+    line-height: 45px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 3rem;
+    line-height: 35px;
+  }
+  @media only screen and (max-width: 802px) {
+    font-size: 2.5rem;
+    line-height: 35px;
+  }
+
+  @media only screen and (max-width: 602px) {
+    font-size: 1.8rem;
+    line-height: 30px;
+  }
 `;
 
 const Motto = styled(SmText)`
@@ -47,7 +81,7 @@ const LandingBox = () => {
     <Container>
       <Contain>
         <Info>
-          <img src={logo} alt='' />
+          
           <Text>
             <Span>JLN</Span> BUILDERS <Span>NIGERIA</Span> LTD
           </Text>

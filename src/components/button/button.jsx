@@ -40,6 +40,7 @@ const CustomButton = styled.button`
     background: white;
     color: #03663e;
     transform: translateY(-0.6px);
+    border: solid 1px #03663e;
   }
   &:active {
     transform: translateY(0.6px);

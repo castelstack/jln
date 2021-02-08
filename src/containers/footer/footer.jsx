@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BgText, MdText, SmText } from "../../constant/style";
+import { BgText,  SmText } from "../../constant/style";
 
 const Container = styled.div`
   display: grid;
@@ -30,18 +30,27 @@ const Content = styled.div`
   
   
 `;
-
+const Head = styled.div`
+ 
+@media only screen and (max-width: 700px) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }`
 const Links = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
    @media only screen and (max-width: 500px) {
-    grid-template-columns: 1fr;
+    
     grid-gap: 2rem;
     
   }
 `;
 const List = styled.div`
   list-type-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: .7rem; 
 `;
 const ListItems = styled.div`
   list-type-style: none;
@@ -68,20 +77,20 @@ const Footer = () => {
     <Container>
       <Content>
         
-          <div>
-            <BgText  white>JLN Buiders ltd</BgText>
+          <Head>
+            <BgText  white center>JLN Buiders ltd</BgText>
             <SmText white>
                           Lorem ipsum dolor sit amet consectetur adipisicing elit. At vitae
                           itaque aut aliquam exercitationem officia quos magnam nemo dolorum
                           repellat deleniti quas possimus voluptas, ea ex, expedita delectus
                           magni quo.
             </SmText>
-                      </div>
+                      </Head>
           <div>
           <Links>
             <List>
               <ListItems>
-                <MdText white>Quick link</MdText>
+                <SmText white bold>Quick link</SmText>
               </ListItems>
               <ListItems>
                 <SmText white>Home</SmText>
@@ -95,7 +104,7 @@ const Footer = () => {
             </List>
             <List>
               <ListItems>
-                <MdText white>About</MdText>
+                <SmText white bold>About</SmText>
               </ListItems>
               <ListItems>
                 <SmText white>Home</SmText>
@@ -109,7 +118,7 @@ const Footer = () => {
             </List>
             <List>
               <ListItems>
-                <MdText white>Company</MdText>
+                <SmText white bold>Company</SmText>
               </ListItems>
               <ListItems>
                 <SmText white>Home</SmText>

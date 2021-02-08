@@ -7,7 +7,7 @@ font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 3.5rem;
   line-height: 45px;
-  /* identical to box height */
+  text-align: ${(props) => (props.center ? "center" : "none")};
 
   color: ${(props) => (props.white ? "white" : "#333333")};
 
@@ -36,7 +36,7 @@ font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 3rem;
   line-height: 45px;
-  /* identical to box height */
+  text-align: ${(props) => (props.center ? "center" : "none")};
 
   color: ${(props) => (props.white ? "white" : "#333333")};
 
@@ -91,7 +91,7 @@ font-family: 'Open Sans', sans-serif;
   font-weight:   ${(props) => (props.bold ? "bold" : "400")};
   font-size: 15px;
   line-height: 22px;
-
+text-align: center;
   color: ${(props) => (props.white ? "white" : "#333333")};
 
   @media only screen and (max-width: 900px) {
