@@ -73,6 +73,9 @@ export default function Drawer(props) {
         <Divider light />
         <NavLk to='/blog'>Blog</NavLk>
           <Divider light />
+          <Divider light />
+        <NavLk to='/login'>Admin</NavLk>
+          <Divider light />
         <FormControl className={classess.formControl}>
         <InputLabel id="demo-simple-select-label">GOOD'S AND SERVICE</InputLabel>
         <Select

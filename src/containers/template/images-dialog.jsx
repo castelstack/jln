@@ -79,7 +79,7 @@ export default function Dialogs(props) {
           title="Contemplative Reptile"
         />
       </Button>
-      <Dialog className={classes.dialogss} fullScreen fullWidth maxWidth='false' onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+      <Dialog className={classes.dialogss}  fullWidth  onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" className={classes.dialogss} onClose={handleClose}>
           Gallery
         </DialogTitle>
