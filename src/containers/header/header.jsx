@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "./header.css";
 import Drawer from "../../components/drawer/drawer";
-import { NavDrop } from "../../components/drawer/drawer-style";
 
 const Container = styled.div`
   display: grid;
@@ -33,7 +32,7 @@ const Nav = styled.div`
 const NavLk = styled(NavLink)`
   text-decoration: none;
   color: #333333;
-  font-size: 1.1rem;
+  font-size: .9rem;
   font-weight: 300;
   position: relative;
   overflow: hidden;
@@ -71,6 +70,19 @@ const NavLk = styled(NavLink)`
     transition-duration: 0.2s;
   }
 `;
+const NavLkk = styled.h4`
+  text-decoration: none;
+  color: #333333;
+  font-size: .9rem;
+  font-weight: 300;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  will-change: color;
+  transition: color 0.25s ease-out;
+  padding: 0.3rem 2rem;
+  
+`;
 
 export default function Header() {
   return (
@@ -92,7 +104,7 @@ export default function Header() {
               <NavLk to='/gallery'>Gallery</NavLk>
             </li>
             <li>
-              <NavDrop>GOOD'S AND SERVICE</NavDrop>
+              <NavLkk>GOOD'S AND SERVICE</NavLkk>
               <ul className='sub'>
                 <li>
                   <NavLk to='/construction'>CONSTRUCTION</NavLk>
