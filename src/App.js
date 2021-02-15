@@ -9,9 +9,10 @@ import Gallery from "./pages/gallery/gallery";
 import ConstructionPage from "./pages/construction-page/construction-page";
 import Blog from "./pages/blog/blog";
 import AgriculturePage from "./pages/agriculture-page/agriculture";
-import Admin from "./pages/admin/admin";
+import AdminAuth from "./pages/admin/admin-auth";
 import ScrollToTop from "./containers/scroll-up/scrollup";
 import Login from "./containers/login/login";
+import { AdminProvider } from './utils/store';
 
 function App() {
   return (
@@ -27,9 +28,11 @@ function App() {
           <Route path='/construction' component={ConstructionPage} />
           <Route path='/agriculture' component={AgriculturePage} />
           <Route path='/blog' component={Blog} />
-          <Route path='/login' component={Login} />
-          <Route path='/admin' component={Admin} />
-          <Route path='/admin/:id' component={Admin} />
+          <AdminProvider>
+            <Route path='/login' component={Login} />
+            <Route path='/admin' component={AdminAuth} />
+          </AdminProvider>
+          
         </Switch>
         <Footer />
         

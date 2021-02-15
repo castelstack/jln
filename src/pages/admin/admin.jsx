@@ -1,5 +1,5 @@
 import React from "react";
-import { Route} from "react-router-dom";
+import { Route } from "react-router-dom";
 import { LgText } from "../../constant/style";
 import AdHomepage from "../../containers/admin-pages/ad-homepage";
 import styled from "styled-components";
@@ -10,6 +10,7 @@ import AdContacts from "../../containers/admin-pages/ad-contacts";
 import AdAgric from "../../containers/admin-pages/ad-agric";
 import AdConstruct from "../../containers/admin-pages/ad-construct";
 import AdManu from "../../containers/admin-pages/ad-manu";
+
 const Container = styled.div`
   padding: 2rem;
   background: #f8f9fa;
@@ -79,7 +80,7 @@ const active = {
   borderBottom: 'solid 6px yellow'
 }
 const Admin = (props) => {
-  const { path } = props.match;
+  const { path } = props;
 
   return (
     <Container>
@@ -109,7 +110,7 @@ const Admin = (props) => {
           </NavLk>
         </NavBar>
 
-        <Route path={`${path}`} exact component={AdHomepage} />
+        <Route path={`${path}`} component={AdHomepage} />
         <Route path={`${path}/ad-about`} component={AdAbout} />
         <Route path={`${path}/ad-services`} component={AdService} />
         <Route path={`${path}/ad-contacts`} component={AdContacts} />
