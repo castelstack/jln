@@ -88,13 +88,13 @@ const SubFoot = () => {
     <Container>
       <GetIn>
         <Bg>
-          <BgText white>Let us work together</BgText>
+          <BgText white>LET US WORK TOGETHER</BgText>
           <SmText white>Get in touch now</SmText>
         </Bg>
       </GetIn>
       <Contain>
         <ContactImport>
-        <BgText>Contact Us</BgText>
+        <BgText center>CONTACT US</BgText>
           <SmText>Send us you message and we will get back to you!</SmText>
        <ContactBox />
         </ContactImport>

@@ -9,6 +9,7 @@ import Gallery from "./pages/gallery/gallery";
 import ConstructionPage from "./pages/construction-page/construction-page";
 import Blog from "./pages/blog/blog";
 import AgriculturePage from "./pages/agriculture-page/agriculture";
+import Admin from "./pages/admin/admin";
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
           <Route path='/construction' component={ConstructionPage} />
           <Route path='/agriculture' component={AgriculturePage} />
           <Route path='/blog' component={Blog} />
+          <Route path='/admin' component={Admin} />
+          <Route path='/admin/:id' component={Admin} />
         </Switch>
-      <Footer />
+        <Footer />
+        
       </Router>
     </div>
   );

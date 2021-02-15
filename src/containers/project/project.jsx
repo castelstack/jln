@@ -3,6 +3,8 @@ import { LgText, SmText } from "../../constant/style";
 import Pic from "../../images/Picture1.png";
 import styled from "styled-components";
 import { CardMedia } from "@material-ui/core";
+import Button from "../../components/button/button";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   padding: 4rem 6rem;
@@ -44,7 +46,7 @@ const Project = () => {
           height='200'
           image={Pic}
           title='Contemplative Reptile'
-          borderRadius="100"
+         
         />
         <CardMedia
           component='img'
@@ -82,6 +84,10 @@ const Project = () => {
           title='Contemplative Reptile'
         />
       </Gallery>
+      <Link to='/gallery'>
+      <Button value='See More' />
+
+      </Link>
     </Container>
   );
 };

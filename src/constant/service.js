@@ -31,7 +31,7 @@ text-decoration: uppercase;
 font-weight: bold;
 @media only screen and (max-width: 600px) {
     font-size: 1.1rem;
-    line-height: 22px;
+    line-height: 42px;
   }`
 
 export const Info = styled(SmText)`

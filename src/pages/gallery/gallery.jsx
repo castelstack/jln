@@ -1,61 +1,88 @@
-import React from 'react';
-// import { Breadcrumbs } from '@material-ui/core';
-// import { NavLink, Route, Switch, withRouter } from 'react-router-dom';
-// import styled from 'styled-components';
-
-// const NavLk = styled(NavLink)`
-// text-decoration: none;
-// color: #333333;
-// font-size: 1.1rem;
-// font-weight: 300;
-// position: relative;
-// overflow: hidden;
-
-// will-change: color;
-// transition: color .25s ease-out;  
+import React from "react";
+import { Breadcrumbs } from "@material-ui/core";
+import { NavLink, Route } from "react-router-dom";
+import styled from "styled-components";
+import GalleryTemp from "../../containers/template/gallery-temp";
+import Box from "../../components/box/box";
 
 
-// &::before, 
-// &::after{
-// content: "";
-// width: 0;
-// height: 3px;
-// background-color: green;
+const Container = styled.div`
+`
+const Content = styled.div`
+display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  justify-items: center;
+  padding: 4rem;
+`
+const Nav = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-gap: 1.5rem;
+`;
+const NavLk = styled(NavLink)`
+  text-decoration: none;
+  color: #03663e;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+text-transform: uppercase;
+  will-change: color;
+  transition: color 0.25s ease-out;
 
-// will-change: width;
-// transition: width .1s ease-out;
+  &::before,
+  &::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: green;
 
-// position: absolute;
-// bottom: 0;
-// }
+    will-change: width;
+    transition: width 0.1s ease-out;
 
-// &::before{
-// left: 50%;
-// transform: translateX(-50%); 
-// }
+    position: absolute;
+    bottom: 0;
+  }
 
-// &::after{
-// right: 50%;
-// transform: translateX(50%); 
-// }
+  &::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-// &:hover::before, 
-// &:hover::after{
-// width: 100%;
-// transition-duration: .2s;
-// }
-// `;
+  &::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    transition-duration: 0.2s;
+  }
+`;
+
+const active = {
+  borderBottom: 'solid 3px green'
+}
 const Gallery = () => {
-    return (
-        <div>
-            <div>
-             
-            </div>
-            <div>
-               
-            </div>
-        </div>
-    );
+  return (
+    <Container>
+      <Box title='Gallery' currentPage='Gallery' />
+          <Content>
+              
+        <Nav>
+          <NavLk to='/gallery' activeStyles={active}>About</NavLk>
+          <NavLk to='/contact'>Contact</NavLk>
+          <NavLk to='/gallery'>Gallery</NavLk>
+          <NavLk to='/blog'>Blog</NavLk>
+        </Nav>
+      
+<GalleryTemp/>
+      <Route path='/agriculture-pro' component={GalleryTemp} />
+      </Content>
+    </Container>
+  );
 };
 
 export default Gallery;

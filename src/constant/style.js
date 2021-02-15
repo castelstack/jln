@@ -29,6 +29,10 @@ font-family: 'Roboto', sans-serif;
     font-size: 1.8rem;
     line-height: 30px;
   }
+  @media only screen and (max-width: 450px) {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
 `;
 export const BgText = styled.h1`
 font-family: 'Roboto', sans-serif;
@@ -108,3 +112,10 @@ text-align: center;
     line-height: 15px;
   }
 `;
+
+export const Form = styled.form`
+display: grid;
+grid-template-columns: 1fr;
+grid-gap: 1.5rem;
+padding: 2rem 0;
+justify-items: center;`

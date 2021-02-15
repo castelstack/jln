@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { LgText, SmText } from "../../constant/style";
-
+import Checkbox from "@material-ui/core/Checkbox";
 const Container = styled.div`
   display: flex;
-  //grid-template-columns: 1fr ;
   justify-content: center;
   padding: 4rem 6rem;
 
@@ -35,16 +34,16 @@ const ContentRev = styled.div`
   grid-gap: 1rem;
 
   @media only screen and (max-width: 850px) {
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
   }
 `;
 const WriteUp = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-
+  justify-items: center;
   grid-gap: 1rem;
   @media only screen and (max-width: 850px) {
-    grid-row:1/2;
+    grid-row: 1/2;
     grid-column: 1/2;
   }
 `;
@@ -54,21 +53,30 @@ const Img = styled.img`
   height: 30rem;
   @media only screen and (max-width: 850px) {
     width: 100%;
-    
   }
 `;
+const SpBox = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 20px;
+`;
 
-export const PagesBox = ({ title, description, image, alt }) => {
+export const PagesBox = ({ title, description, image, alt, offers, data }) => {
+
   return (
     <Container>
       <Content>
         <WriteUp>
-          <LgText>{title}</LgText>
+          <LgText style={{textAlign: 'center'}}>{title}</LgText>
           <SmText>{description}</SmText>
+          <SpBox>
+                <SmText>
+              <Checkbox style={{ color: "#03663e" }} checked /> {offers} {data}
+            </SmText>
+          </SpBox>
         </WriteUp>
-              <div>
-                  
-        <Img src={image} alt={alt} />
+        <div>
+          <Img src={image} alt={alt} />
         </div>
       </Content>
     </Container>
@@ -78,12 +86,12 @@ export const PagesBox = ({ title, description, image, alt }) => {
 export const RevPagesBox = ({ title, description, image, alt }) => {
   return (
     <Container>
-          <ContentRev><div>
-              
-        <Img src={image} alt={alt} />
-      </div>
+      <ContentRev>
+        <div>
+          <Img src={image} alt={alt} />
+        </div>
         <WriteUp>
-          <LgText>{title}</LgText>
+          <LgText style={{textAlign: 'center'}}>{title}</LgText>
           <SmText>{description}</SmText>
         </WriteUp>
       </ContentRev>

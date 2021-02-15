@@ -8,7 +8,7 @@ export const ContactCon = styled.div`
   padding: 1rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 0.5rem;
+  grid-gap: 1.5rem;
 `;
 const ContactBox = ({color}) => {
     return (

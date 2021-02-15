@@ -17,7 +17,7 @@ const Contain = styled.div`
   height: 90vh;
   display: flex;
   align-items: center;
-
+  justify-content: center;
    
   @media only screen and (max-width: 990px) {
     display: flex;
@@ -29,12 +29,11 @@ const Contain = styled.div`
 
 const Info = styled.div`
   margin: 0 6rem;
-  @media only screen and (max-width: 990px) {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-  }
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+ 
   @media only screen and (max-width: 800px) {
     margin: 0rem 1rem;
   }
@@ -67,15 +66,13 @@ const Text = styled(LgText)`
 const Motto = styled(SmText)`
   font-size: 1rem;
   line-height: 1.2em;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 2rem;
   text-transform: uppercase;
 `;
-const Span = styled.span`
-  color: #03663e;
-`;
+
 const LandingBox = () => {
   return (
     <Container>
@@ -83,7 +80,7 @@ const LandingBox = () => {
         <Info>
           
           <Text>
-            <Span>JLN</Span> BUILDERS <Span>NIGERIA</Span> LTD
+           JLN BUILDERS NIGERIA LTD
           </Text>
           <Motto>We are to make you better</Motto>
           <Link to='contact'>

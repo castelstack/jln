@@ -5,22 +5,34 @@ import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import Button from "@material-ui/core/Button";
 //import List from "@material-ui/core/List";
 import MenuIcon from "@material-ui/icons/Menu";
-import { Divider } from "@material-ui/core";
+import { Divider, FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 import Img from "../../images/logo.png";
 import { Container, List, NavLk, NavDrop} from "./drawer-style";
 import '../../containers/header/header.css'
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 200,
   },
   fullList: {
     width: "auto",
   },
+  
 });
+const useStyle = makeStyles((theme) => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 180,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
+
 
 export default function Drawer(props) {
   //material ui state by default i.e from the website
   const classes = useStyles();
+  const classess = useStyle();
   const [state, setState] = useState({
     right: false,
   });
@@ -52,34 +64,31 @@ export default function Drawer(props) {
       <List>
         <img src={Img} alt=''/>
         <NavLk to='/'>Home</NavLk>
-        <Divider light />
+        <Divider/>
         <NavLk to='/about'>About</NavLk>
         <Divider light />
         <NavLk to='/contact'>Contact</NavLk>
         <Divider light />
         <NavLk to='/gallery'>Gallery</NavLk>
         <Divider light />
-        <nav>
-  <ul className="primary">
-    <li>
-    <NavDrop >GOOD'S AND SERVICE</NavDrop>
-      <ul className="msub">
-        <li><NavLk to='/construction'>CONSTRUCTION</NavLk></li>
-        <li><NavLk to='/agriculture'>Agriculture</NavLk></li>
-        <li><NavLk to='/'>Blog</NavLk></li>
-      </ul>  
-    </li>
-   </ul>
-</nav>
-
-
-        
-
-
-
-        <Divider light />
         <NavLk to='/blog'>Blog</NavLk>
           <Divider light />
+        <FormControl className={classess.formControl}>
+        <InputLabel id="demo-simple-select-label">GOOD'S AND SERVICE</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+        >
+          <List>
+
+          <MenuItem><NavLk to='/construction'>CONSTRUCTION</NavLk></MenuItem>
+          <MenuItem ><NavLk to='/agriculture'>Agriculture</NavLk></MenuItem>
+          <MenuItem ><NavLk to='/agriculture'>Agriculture</NavLk></MenuItem>
+          </List>
+        </Select>
+        </FormControl>
+        <Divider light />
+       
           
         </List>
      
