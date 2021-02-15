@@ -11,6 +11,7 @@ import Blog from "./pages/blog/blog";
 import AgriculturePage from "./pages/agriculture-page/agriculture";
 import Admin from "./pages/admin/admin";
 import ScrollToTop from "./containers/scroll-up/scrollup";
+import Login from "./containers/login/login";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
           <Route path='/construction' component={ConstructionPage} />
           <Route path='/agriculture' component={AgriculturePage} />
           <Route path='/blog' component={Blog} />
-          <Route path='/admin' component={Admin} />
+          <Route path='/admin' component={Login} />
           <Route path='/admin/:id' component={Admin} />
         </Switch>
         <Footer />
