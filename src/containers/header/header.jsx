@@ -75,13 +75,6 @@ const NavLk = styled(NavLink)`
 export default function Header() {
   return (
     <Container className='header'>
-      {/* <Nav>
-        <NavLk to='/'>Home</NavLk>
-        <NavLk to='/about'>About</NavLk>
-        <NavLk to='/contact'>Contact</NavLk>
-        <NavLk to='/gallery'>Gallery</NavLk>
-        <NavLk to='/blog'>Blog</NavLk>
-      </Nav> */}
       <NavLink to='/'>
         <Img src={Logo} alt='logo' />
       </NavLink>
@@ -119,7 +112,7 @@ export default function Header() {
               <NavLk to='/blog'>Blog</NavLk>
             </li>
             <li>
-              <NavLk to='/admin'>Admin</NavLk>
+              <NavLk to='/login'>Admin</NavLk>
             </li>
           </ul>
         </nav>

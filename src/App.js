@@ -27,7 +27,8 @@ function App() {
           <Route path='/construction' component={ConstructionPage} />
           <Route path='/agriculture' component={AgriculturePage} />
           <Route path='/blog' component={Blog} />
-          <Route path='/admin' component={Login} />
+          <Route path='/login' component={Login} />
+          <Route path='/admin' component={Admin} />
           <Route path='/admin/:id' component={Admin} />
         </Switch>
         <Footer />
