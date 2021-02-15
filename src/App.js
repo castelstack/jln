@@ -10,11 +10,13 @@ import ConstructionPage from "./pages/construction-page/construction-page";
 import Blog from "./pages/blog/blog";
 import AgriculturePage from "./pages/agriculture-page/agriculture";
 import Admin from "./pages/admin/admin";
+import ScrollToTop from "./containers/scroll-up/scrollup";
 
 function App() {
   return (
     <div className='App'>
       <Router>
+        <ScrollToTop />
         <Header />
         <Switch>
           <Route path='/' exact component={Homepage} />

@@ -1,5 +1,4 @@
 import React from "react";
-import { Breadcrumbs } from "@material-ui/core";
 import { NavLink, Route } from "react-router-dom";
 import styled from "styled-components";
 import GalleryTemp from "../../containers/template/gallery-temp";
@@ -72,10 +71,10 @@ const Gallery = () => {
           <Content>
               
         <Nav>
-          <NavLk to='/gallery' activeStyles={active}>About</NavLk>
-          <NavLk to='/contact'>Contact</NavLk>
-          <NavLk to='/gallery'>Gallery</NavLk>
-          <NavLk to='/blog'>Blog</NavLk>
+          <NavLk to='/tags' activeStyles={active}>AGRICULTURE</NavLk>
+          <NavLk to='/tags'>CONSTRUCTION</NavLk>
+          <NavLk to='/tags'>MANU-REP</NavLk>
+          <NavLk to='/tags'>ESTATE</NavLk>
         </Nav>
       
 <GalleryTemp/>

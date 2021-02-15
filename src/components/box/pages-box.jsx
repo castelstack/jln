@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { LgText, SmText } from "../../constant/style";
-import Checkbox from "@material-ui/core/Checkbox";
+import { LgText, MdText, SmText } from "../../constant/style";
+import AllInclusiveIcon from "@material-ui/icons/AllInclusive";
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -57,22 +57,25 @@ const Img = styled.img`
 `;
 const SpBox = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: max-content;
   grid-column-gap: 20px;
+  justify-items: center;
+  margin: 2rem 0;
 `;
 
-export const PagesBox = ({ title, description, image, alt, offers, data }) => {
-
+export const PagesBox = ({ title, description, image, alt, offers }) => {
   return (
     <Container>
       <Content>
         <WriteUp>
-          <LgText style={{textAlign: 'center'}}>{title}</LgText>
+          <LgText style={{ textAlign: "center" }}>{title}</LgText>
           <SmText>{description}</SmText>
           <SpBox>
-                <SmText>
-              <Checkbox style={{ color: "#03663e" }} checked /> {offers} {data}
-            </SmText>
+            <AllInclusiveIcon
+              style={{ color: "#03663e", width: "4rem", height: "4rem" }}
+              checked
+            />
+            <MdText bold>{offers}</MdText>
           </SpBox>
         </WriteUp>
         <div>
@@ -91,7 +94,7 @@ export const RevPagesBox = ({ title, description, image, alt }) => {
           <Img src={image} alt={alt} />
         </div>
         <WriteUp>
-          <LgText style={{textAlign: 'center'}}>{title}</LgText>
+          <LgText style={{ textAlign: "center" }}>{title}</LgText>
           <SmText>{description}</SmText>
         </WriteUp>
       </ContentRev>

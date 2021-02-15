@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route} from "react-router-dom";
 import { LgText } from "../../constant/style";
 import AdHomepage from "../../containers/admin-pages/ad-homepage";
 import styled from "styled-components";

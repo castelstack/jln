@@ -20,9 +20,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Agriculture() {
+export default function ServiceTemp({title, description, link}) {
   const classes = useStyles();
-
+ 
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -34,42 +34,23 @@ export default function Agriculture() {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Head >
-            AGRICULTURE
+          <Head style={{textTransform: 'uppercase'}}>
+            {title}
           </Head>
           <Info >
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {description}
           </Info>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Link to='/agriculture' >
+        <Link to={`/${link}`} >
           
-        <Button size="small" color="primary">
+          <Button size="small" color="primary">
           Learn More
         </Button>
        </Link>
+         
       </CardActions>
     </Card>
   );
 }
-// const Agriculture = () => {
-//     return (
-//         <Container>
-            
-//             <Card>
-//                 <Img>
-
-//                 <Image src={Agric} alt='' />
-//                 </Img>
-//                 <Details>
-//                     <Head>AGRICTURE</Head>
-//             <Info>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, odit dignissimos quo veniam dolorum quod magnam quidem sed facilis ipsam maxime error iure magni, molestiae blanditiis? Laudantium accusantium asperiores nisi.</Info>
-//                 </Details>
-//             </Card>
-//         </Container>
-//     );
-// };
-
-// export default Agriculture;

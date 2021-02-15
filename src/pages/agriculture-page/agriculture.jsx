@@ -13,7 +13,7 @@ const AgriculturePage = () => {
         description='loremDonec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.'
       alt='construction'
       image={Img}
-      offers={[ 'food ', 'beands ,']}
+      offers={[ 'FISH FARM-','POULTRY-','PIG FARM-','SNAIL-','MUSHROOM']}
           />
           <Divider light />
           <RevPagesBox  title='WE PRODUCE THE FRESHEST FRUITS.'
